@@ -1,158 +1,612 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="theme-color" content="#000000" />
-        <meta name="description" content="A product of emergent.sh" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap" rel="stylesheet" />
-        <!--
-        manifest.json provides metadata used when your web app is installed on a
-        user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-        -->
-        <!--
-        Notice the use of %PUBLIC_URL% in the tags above.
-        It will be replaced with the URL of the `public` folder during the build.
-        Only files inside the `public` folder can be referenced from the HTML.
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Kali Dham Guest House Puri — 37 rooms near Puri Beach. AC, Sea View, Kitchen rooms available. Family-owned since 1977. Call +91 9831492081">
+  <meta name="keywords" content="Kali Dham Guest House Puri, Puri beach hotel, guest house Puri, sea view rooms Puri, AC rooms Puri, family guest house Puri Odisha">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="Kali Dham Guest House Puri | Sea-Side Retreat Since 1977">
+  <meta property="og:description" content="37 rooms near Puri Beach — AC, Sea View, Kitchen rooms. Family-owned since 1977. Just 3 minutes from the sea.">
+  <meta property="og:image" content="https://www.kalidhamguesthouse.com/style/images/art/bgp1.jpg">
+  <meta property="og:type" content="website">
+  <title>Kali Dham Guest House Puri | Sea-Side Retreat Since 1977</title>
 
-        Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-        work correctly both with client-side routing and a non-root public URL.
-        Learn how to configure a non-root public URL by running `npm run build`.
-        -->
-        <title>Emergent | Fullstack App</title>
-        <script>window.addEventListener("error",function(e){if(e.error instanceof DOMException&&e.error.name==="DataCloneError"&&e.message&&e.message.includes("PerformanceServerTiming")){e.stopImmediatePropagation();e.preventDefault()}},true);</script>
-        <script src="https://assets.emergent.sh/scripts/emergent-main.js"></script>
-    </head>
-    <body>
-        <noscript>You need to enable JavaScript to run this app.</noscript>
-        <div id="root"></div>
-        <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+  <!-- JSON-LD Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LodgingBusiness",
+    "name": "Kali Dham Guest House",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Gour Bat Sahi",
+      "addressLocality": "Puri",
+      "addressRegion": "Odisha",
+      "postalCode": "752001",
+      "addressCountry": "IN"
+    },
+    "telephone": "+91-9831492081",
+    "numberOfRooms": 37,
+    "foundingDate": "1977",
+    "description": "Family-owned guest house in Puri since 1977. 37 rooms with AC, Sea View and Kitchen options. Just 3 minutes from Puri Beach.",
+    "url": "https://www.kalidhamguesthouse.com"
+  }
+  </script>
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
+  <!-- Bootstrap 5.3 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Swiper -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  <!-- AOS -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+  <!-- Custom -->
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
-        <a
-            id="emergent-badge"
-            target="_blank"
-            href="https://app.emergent.sh/?utm_source=emergent-badge"
-            style="
-                display: inline-flex !important;
-                box-sizing: border-box;
-                width: 178px;
-                height: 40px;
-                padding: 8px 12px 8px 12px;
-                align-items: center !important;
-                gap: 8px;
-                border-radius: 50px !important;
-                background: #000 !important;
-                position: fixed !important;
-                bottom: 16px;
-                right: 16px;
-                text-decoration: none;
-                font-family: -apple-system, BlinkMacSystemFont,
-                    &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell,
-                    &quot;Open Sans&quot;, &quot;Helvetica Neue&quot;,
-                    sans-serif !important;
-                font-size: 12px !important;
-                z-index: 9999 !important;
-            "
-        >
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
-                <path d="M15.5702 8.13142C15.7729 8.0412 16.0007 8.18878 15.9892 8.4103C15.8374 11.3192 14.0965 14.0405 11.2531 15.3065C8.40964 16.5725 5.2224 16.0453 2.95912 14.2117C2.78676 14.072 2.82955 13.804 3.03219 13.7137L4.95677 12.8568C5.04866 12.8159 5.15446 12.823 5.24204 12.8725C6.73377 13.7153 8.59176 13.8649 10.2772 13.1145C11.9626 12.3641 13.0947 10.8833 13.4665 9.21075C13.4883 9.11256 13.5539 9.02918 13.6457 8.98827L15.5702 8.13142Z" fill="white"/>
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M15.3066 4.74698L15.5067 5.19653C15.5759 5.35178 15.5061 5.53366 15.3508 5.60278L1.29992 11.8586C1.14467 11.9278 0.962794 11.8579 0.893675 11.7027L0.701732 11.2716L0.693457 11.2531C-1.10317 7.21778 0.711626 2.49007 4.74692 0.693443C8.78221 -1.10318 13.51 0.711693 15.3066 4.74698ZM2.82356 8.55367C2.63552 8.63739 2.41991 8.51617 2.40853 8.31065C2.28373 6.05724 3.53858 3.85787 5.72286 2.88536C7.90715 1.91286 10.3813 2.45199 11.9724 4.05256C12.1175 4.19854 12.0633 4.43988 11.8753 4.5236L2.82356 8.55367Z" fill="white"/>
-            </svg>
-            <p
-                style="
-                    color: #FFF !important;
-                    font-family: 'Inter', sans-serif !important;
-                    font-size: 13px !important;
-                    font-style: normal !important;
-                    font-weight: 600 !important;
-                    line-height: 20px !important;
-                    margin: 0 !important;
-                    white-space: nowrap !important;
-                "
-            >
-                Made with Emergent
+<!-- TOP BAR -->
+<div class="top-bar">
+  <div class="container">
+    <div class="top-bar-inner">
+      <div class="top-bar-left">
+        <span><i class="fas fa-map-marker-alt"></i> Gour Bat Sahi, Puri &mdash; Near Sea</span>
+        <a href="mailto:kalidhamguesthouse@rediffmail.com"><i class="fas fa-envelope"></i> kalidhamguesthouse@rediffmail.com</a>
+      </div>
+      <div class="top-bar-right">
+        <a href="tel:+919831492081" data-testid="topbar-phone1"><i class="fas fa-phone"></i> +91 9831492081</a>
+        <a href="tel:+919230620199" data-testid="topbar-phone2" class="d-none d-sm-inline">+91 9230620199</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg sticky-top" id="mainNavbar" data-testid="main-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/index.html" data-testid="nav-logo">
+      <img src="https://www.kalidhamguesthouse.com/style/images/kali_logo.png" alt="Kali Dham Guest House Logo" height="52">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-label="Toggle navigation" data-testid="navbar-toggler">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto align-items-center gap-1">
+        <li class="nav-item"><a class="nav-link active" href="/index.html" data-testid="nav-home">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="/rooms.html" data-testid="nav-rooms">Rooms &amp; Rates</a></li>
+        <li class="nav-item"><a class="nav-link" href="/amenities.html" data-testid="nav-amenities">Amenities</a></li>
+        <li class="nav-item"><a class="nav-link" href="/gallery.html" data-testid="nav-gallery">Gallery</a></li>
+        <li class="nav-item"><a class="nav-link" href="/about.html" data-testid="nav-about">About Us</a></li>
+        <li class="nav-item"><a class="nav-link" href="/contact.html" data-testid="nav-contact">Contact</a></li>
+        <li class="nav-item ms-lg-3">
+          <a class="btn-gold px-4 py-2" href="/booking.html" data-testid="nav-book-now">Book Now</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- ============================================================
+     SECTION 1: HERO SLIDER
+============================================================ -->
+<div class="swiper hero-swiper" data-testid="hero-slider">
+  <div class="swiper-wrapper">
+
+    <!-- Slide 1 -->
+    <div class="swiper-slide hero-slide" style="background-image:url('https://www.kalidhamguesthouse.com/style/images/art/bgp1.jpg');">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <span class="hero-label">Welcome to Puri&rsquo;s Finest Family Guest House</span>
+        <h1 class="hero-title">Welcome to Kali Dham<br>Guest House</h1>
+        <p class="hero-sub">Your Sea-Side Retreat in Puri Since 1977</p>
+        <a href="/booking.html" class="hero-cta" data-testid="hero-cta-1">Check Availability</a>
+      </div>
+    </div>
+
+    <!-- Slide 2 -->
+    <div class="swiper-slide hero-slide" style="background-image:url('https://www.kalidhamguesthouse.com/style/images/art/bgp2.jpg');">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <span class="hero-label">Comfort &amp; Value</span>
+        <h1 class="hero-title">37 Comfortable Rooms</h1>
+        <p class="hero-sub">AC &middot; Deluxe &middot; Sea View &middot; Family Rooms</p>
+        <a href="/rooms.html" class="hero-cta" data-testid="hero-cta-2">Explore Rooms</a>
+      </div>
+    </div>
+
+    <!-- Slide 3 -->
+    <div class="swiper-slide hero-slide" style="background-image:url('https://www.kalidhamguesthouse.com/style/images/art/bgp3.jpg');">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <span class="hero-label">Prime Location</span>
+        <h1 class="hero-title">Just 3 Minutes<br>from the Sea</h1>
+        <p class="hero-sub">Experience Puri like never before</p>
+        <a href="/booking.html" class="hero-cta" data-testid="hero-cta-3">Check Availability</a>
+      </div>
+    </div>
+
+    <!-- Slide 4 -->
+    <div class="swiper-slide hero-slide" style="background-image:url('https://www.kalidhamguesthouse.com/style/images/art/bgp4.jpg');">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <span class="hero-label">Best Price Guaranteed</span>
+        <h1 class="hero-title">Book Direct &amp; Save</h1>
+        <p class="hero-sub">No hidden charges. Call or enquire online.</p>
+        <a href="/booking.html" class="hero-cta" data-testid="hero-cta-4">Book Now</a>
+      </div>
+    </div>
+
+    <!-- Slide 5 -->
+    <div class="swiper-slide hero-slide" style="background-image:url('https://www.kalidhamguesthouse.com/style/images/art/bgp5.jpg');">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <span class="hero-label">Three Generations of Hospitality</span>
+        <h1 class="hero-title">Family-Owned<br>Since 1977</h1>
+        <p class="hero-sub">The Dutta family&rsquo;s warm welcome awaits you</p>
+        <a href="/about.html" class="hero-cta" data-testid="hero-cta-5">Our Story</a>
+      </div>
+    </div>
+
+  </div>
+  <div class="swiper-pagination"></div>
+</div>
+
+<!-- ============================================================
+     SECTION 2: QUICK BOOKING STRIP
+============================================================ -->
+<div class="booking-strip" data-testid="booking-strip">
+  <div class="container">
+    <form id="bookingStripForm" data-testid="booking-strip-form">
+      <div class="row g-3 align-items-end">
+        <div class="col-6 col-md-3 col-lg-2">
+          <label for="checkIn">Check-In</label>
+          <input type="date" class="form-control" id="checkIn" data-testid="strip-checkin">
+        </div>
+        <div class="col-6 col-md-3 col-lg-2">
+          <label for="checkOut">Check-Out</label>
+          <input type="date" class="form-control" id="checkOut" data-testid="strip-checkout">
+        </div>
+        <div class="col-6 col-md-3 col-lg-3">
+          <label for="roomType">Room Type</label>
+          <select class="form-select" id="roomType" data-testid="strip-room-type">
+            <option value="">All Room Types</option>
+            <option>AC Deluxe Room</option>
+            <option>Non-AC Deluxe</option>
+            <option>Standard Double with Kitchen</option>
+            <option>Sea View Room</option>
+            <option>Side View Room</option>
+          </select>
+        </div>
+        <div class="col-6 col-md-3 col-lg-2">
+          <label for="adults">Adults</label>
+          <select class="form-select" id="adults" data-testid="strip-adults">
+            <option>1 Adult</option>
+            <option selected>2 Adults</option>
+            <option>3 Adults</option>
+            <option>4 Adults</option>
+          </select>
+        </div>
+        <div class="col-12 col-lg-3">
+          <button type="submit" class="btn-strip" data-testid="strip-submit">
+            <i class="fas fa-search me-2"></i> Check Availability
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- ============================================================
+     SECTION 3: WHY CHOOSE US
+============================================================ -->
+<section class="section-py" style="background:#fff;">
+  <div class="container">
+    <div class="text-center mb-5" data-aos="fade-up">
+      <span class="section-tag">Why Choose Us</span>
+      <h2 class="section-title">The Kali Dham Difference</h2>
+      <div class="gold-line"></div>
+      <p class="section-subtitle">Four reasons thousands of families have made us their Puri home for over four decades.</p>
+    </div>
+    <div class="row g-4">
+      <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="100">
+        <div class="why-card" data-testid="why-card-sea">
+          <div class="why-icon-wrap">
+            <i class="fas fa-water"></i>
+          </div>
+          <h4>3 Min from Sea</h4>
+          <p>Step out and reach Puri Beach in just a 3-minute walk from our doorstep.</p>
+        </div>
+      </div>
+      <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="200">
+        <div class="why-card" data-testid="why-card-family">
+          <div class="why-icon-wrap">
+            <i class="fas fa-heart"></i>
+          </div>
+          <h4>Family Since 1977</h4>
+          <p>Three generations of the Dutta family have welcomed guests with warmth and care.</p>
+        </div>
+      </div>
+      <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="300">
+        <div class="why-card" data-testid="why-card-kitchen">
+          <div class="why-icon-wrap">
+            <i class="fas fa-utensils"></i>
+          </div>
+          <h4>Rooms with Kitchen</h4>
+          <p>29 of our 37 rooms come with an in-room kitchen — perfect for families.</p>
+        </div>
+      </div>
+      <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="400">
+        <div class="why-card" data-testid="why-card-seaview">
+          <div class="why-icon-wrap">
+            <i class="fas fa-binoculars"></i>
+          </div>
+          <h4>Sea View Rooms</h4>
+          <p>Stunning Bay of Bengal views from our 2nd and 3rd floor rooms at sunrise.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SECTION 4: FEATURED ROOMS
+============================================================ -->
+<section class="section-py bg-cream" data-testid="featured-rooms">
+  <div class="container">
+    <div class="text-center mb-5" data-aos="fade-up">
+      <span class="section-tag">Our Rooms</span>
+      <h2 class="section-title">Featured Rooms &amp; Suites</h2>
+      <div class="gold-line"></div>
+      <p class="section-subtitle">Thoughtfully furnished rooms for every budget, from cosy standard to breezy sea-view.</p>
+    </div>
+    <div class="row g-4">
+
+      <!-- Room Card 1 -->
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="room-card" data-testid="room-card-ac">
+          <div class="room-card-img">
+            <span class="room-badge">Most Popular</span>
+            <img src="https://www.kalidhamguesthouse.com/style/images/art/k1.jpg" alt="AC Deluxe Room - Kali Dham Guest House Puri" loading="lazy">
+          </div>
+          <div class="room-card-body">
+            <h4>AC Deluxe Room</h4>
+            <ul class="room-features">
+              <li><i class="fas fa-check-circle"></i> Split AC, LED TV &amp; Cable</li>
+              <li><i class="fas fa-check-circle"></i> Attached Western Bathroom</li>
+              <li><i class="fas fa-check-circle"></i> Double Bed (7'&times;6'), Wardrobe</li>
+              <li><i class="fas fa-check-circle"></i> Sea View on 3rd Floor</li>
+              <li><i class="fas fa-check-circle"></i> Max 4 Persons</li>
+            </ul>
+          </div>
+          <div class="room-card-footer">
+            <div class="room-card-phone">
+              <i class="fas fa-phone text-gold me-1"></i>
+              <a href="tel:+919831492081">+91 9831492081</a>
+            </div>
+            <a href="/rooms.html" data-testid="room-view-ac">View Details</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Room Card 2 -->
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="room-card" data-testid="room-card-nonac">
+          <div class="room-card-img">
+            <span class="room-badge">Best Value</span>
+            <img src="https://www.kalidhamguesthouse.com/style/images/art/k2.jpg" alt="Non-AC Deluxe Room - Kali Dham Guest House" loading="lazy">
+          </div>
+          <div class="room-card-body">
+            <h4>Non-AC Deluxe Room</h4>
+            <ul class="room-features">
+              <li><i class="fas fa-check-circle"></i> Premium Fittings &amp; Vitrified Tiles</li>
+              <li><i class="fas fa-check-circle"></i> Attached Kitchen with Balcony</li>
+              <li><i class="fas fa-check-circle"></i> LED TV, Ceiling Fan</li>
+              <li><i class="fas fa-check-circle"></i> Aquaguard Water</li>
+              <li><i class="fas fa-check-circle"></i> Dressing Table &amp; Wardrobe</li>
+            </ul>
+          </div>
+          <div class="room-card-footer">
+            <div class="room-card-phone">
+              <i class="fas fa-phone text-gold me-1"></i>
+              <a href="tel:+919831492081">+91 9831492081</a>
+            </div>
+            <a href="/rooms.html" data-testid="room-view-nonac">View Details</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Room Card 3 -->
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+        <div class="room-card" data-testid="room-card-seaview">
+          <div class="room-card-img">
+            <span class="room-badge">Sea View</span>
+            <img src="https://www.kalidhamguesthouse.com/style/images/gallery/big/b1.jpeg" alt="Sea View Room - Kali Dham Guest House Puri" loading="lazy">
+          </div>
+          <div class="room-card-body">
+            <h4>Sea View Room</h4>
+            <ul class="room-features">
+              <li><i class="fas fa-check-circle"></i> Clear Bay of Bengal View</li>
+              <li><i class="fas fa-check-circle"></i> 3rd Floor, Sunrise Views</li>
+              <li><i class="fas fa-check-circle"></i> LED TV &amp; Ceiling Fan</li>
+              <li><i class="fas fa-check-circle"></i> Attached Kitchen</li>
+              <li><i class="fas fa-check-circle"></i> Advance Booking Recommended</li>
+            </ul>
+          </div>
+          <div class="room-card-footer">
+            <div class="room-card-phone">
+              <i class="fas fa-phone text-gold me-1"></i>
+              <a href="tel:+919831492081">+91 9831492081</a>
+            </div>
+            <a href="/rooms.html" data-testid="room-view-seaview">View Details</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="text-center mt-5" data-aos="fade-up">
+      <a href="/rooms.html" class="btn-navy" data-testid="view-all-rooms">View All Room Types</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SECTION 5: AMENITIES STRIP
+============================================================ -->
+<section class="amenity-strip section-py-sm" data-testid="amenities-strip">
+  <div class="container">
+    <div class="text-center mb-4" data-aos="fade-up">
+      <span class="section-tag">What We Offer</span>
+      <h2 class="section-title">Amenities at a Glance</h2>
+      <div class="gold-line"></div>
+    </div>
+    <div class="row row-cols-4 row-cols-md-8 g-2" data-aos="fade-up" data-aos-delay="100">
+      <div class="col"><div class="amenity-item"><div class="icon-circle"><i class="fas fa-snowflake"></i></div><h6>AC Rooms</h6></div></div>
+      <div class="col"><div class="amenity-item"><div class="icon-circle"><i class="fas fa-car"></i></div><h6>Free Parking</h6></div></div>
+      <div class="col"><div class="amenity-item"><div class="icon-circle"><i class="fas fa-tint"></i></div><h6>Aquaguard Water</h6></div></div>
+      <div class="col"><div class="amenity-item"><div class="icon-circle"><i class="fas fa-bolt"></i></div><h6>Generator</h6></div></div>
+      <div class="col"><div class="amenity-item"><div class="icon-circle"><i class="fas fa-tv"></i></div><h6>LED TV</h6></div></div>
+      <div class="col"><div class="amenity-item"><div class="icon-circle"><i class="fas fa-utensils"></i></div><h6>Kitchen</h6></div></div>
+      <div class="col"><div class="amenity-item"><div class="icon-circle"><i class="fas fa-fan"></i></div><h6>Ceiling Fans</h6></div></div>
+      <div class="col"><div class="amenity-item"><div class="icon-circle"><i class="fas fa-water"></i></div><h6>Sea View</h6></div></div>
+    </div>
+    <div class="text-center mt-4" data-aos="fade-up">
+      <a href="/amenities.html" class="btn-gold px-5 py-3" data-testid="view-all-amenities">All Amenities</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SECTION 6: ABOUT SNIPPET
+============================================================ -->
+<section class="about-section section-py" data-testid="about-section">
+  <div class="container">
+    <div class="row g-5 align-items-center">
+      <div class="col-lg-5" data-aos="fade-right">
+        <div class="about-img-wrap">
+          <img src="https://www.kalidhamguesthouse.com/style/images/art/k2.jpg" alt="Kali Dham Guest House Interior" loading="lazy">
+          <div class="about-img-badge">
+            <span>47+</span>
+            Years of Hospitality
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-7" data-aos="fade-left">
+        <div class="about-content">
+          <span class="section-tag">Our Story</span>
+          <h2 class="section-title">A Legacy of Warmth<br>Since 1977</h2>
+          <div class="gold-line-left gold-line"></div>
+          <p>Kali Dham Guest House, named after Late Shri Kalidas Dutta, has been welcoming guests to the holy city of Puri since 1977. Founded by Late Shri Tarak Nath Dutta and carried forward through three generations of the Dutta family, today managed by Rajib Dutta.</p>
+          <p>With 37 well-maintained rooms — including AC rooms, sea-view rooms, and rooms with attached kitchens — we offer the comfort of home, just 3 minutes from the Bay of Bengal.</p>
+          <div class="stat-row">
+            <div class="stat-item">
+              <span class="stat-num">37</span>
+              <span class="stat-label">Rooms</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-num">1977</span>
+              <span class="stat-label">Established</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-num">3 min</span>
+              <span class="stat-label">To Beach</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-num">3</span>
+              <span class="stat-label">Generations</span>
+            </div>
+          </div>
+          <a href="/about.html" class="btn-navy mt-2" data-testid="read-our-story">Read Our Story</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SECTION 7: TESTIMONIALS
+============================================================ -->
+<section class="testimonials-section section-py" data-testid="testimonials-section">
+  <div class="container">
+    <div class="text-center mb-5" data-aos="fade-up">
+      <span class="section-tag">Guest Reviews</span>
+      <h2 class="section-title">What Our Guests Say</h2>
+      <div class="gold-line"></div>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="testimonial-card" data-testid="testimonial-1">
+          <div class="t-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p class="t-quote">"Excellent location, very close to beach. Rooms clean with kitchen — perfect for family trip. Bapi da and Kashi da are very helpful!"</p>
+          <div class="t-author">Sourav M.</div>
+          <div class="t-location">Kolkata, West Bengal</div>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="testimonial-card" data-testid="testimonial-2">
+          <div class="t-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p class="t-quote">"Been visiting for 10 years. Sea view from third floor is breathtaking. This is our go-to Puri stay every single time."</p>
+          <div class="t-author">Priya S.</div>
+          <div class="t-location">Bhubaneswar, Odisha</div>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+        <div class="testimonial-card" data-testid="testimonial-3">
+          <div class="t-stars">&#9733;&#9733;&#9733;&#9733;</div>
+          <p class="t-quote">"Great value. Rooms with kitchen ideal for families. Generator backup was a lifesaver during power cuts. Will definitely return."</p>
+          <div class="t-author">Arnab D.</div>
+          <div class="t-location">Kolkata, West Bengal</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SECTION 8: LOCATION
+============================================================ -->
+<section class="location-section section-py" data-testid="location-section">
+  <div class="container">
+    <div class="text-center mb-5" data-aos="fade-up">
+      <span class="section-tag">Find Us</span>
+      <h2 class="section-title">Our Location in Puri</h2>
+      <div class="gold-line"></div>
+    </div>
+    <div class="row g-4 align-items-stretch">
+      <div class="col-lg-7" data-aos="fade-right">
+        <div class="map-box">
+          <iframe src="https://maps.google.com/maps?q=Gour+Bat+Sahi+Puri+Odisha&t=&z=15&ie=UTF8&iwloc=&output=embed"
+            title="Kali Dham Guest House Location"
+            allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+      <div class="col-lg-5" data-aos="fade-left">
+        <div class="contact-info-card">
+          <h4>Reach Us Easily</h4>
+          <div class="ci-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <p>Gour Bat Sahi, Puri, Odisha 752001<br>
+               Near Hotel Raj. Opp. New Kakatua Restaurant.<br>
+               Just 3 minutes walk to Puri Beach.</p>
+          </div>
+          <div class="ci-item">
+            <i class="fas fa-phone"></i>
+            <p>
+              <a href="tel:+919831492081">+91 9831492081</a><br>
+              <a href="tel:+919230620199">+91 9230620199</a>
             </p>
-        </a>
-        <script>
-            !(function (t, e) {
-                var o, n, p, r;
-                e.__SV ||
-                    ((window.posthog = e),
-                    (e._i = []),
-                    (e.init = function (i, s, a) {
-                        function g(t, e) {
-                            var o = e.split(".");
-                            2 == o.length && ((t = t[o[0]]), (e = o[1])),
-                                (t[e] = function () {
-                                    t.push(
-                                        [e].concat(
-                                            Array.prototype.slice.call(
-                                                arguments,
-                                                0,
-                                            ),
-                                        ),
-                                    );
-                                });
-                        }
-                        ((p = t.createElement("script")).type =
-                            "text/javascript"),
-                            (p.crossOrigin = "anonymous"),
-                            (p.async = !0),
-                            (p.src =
-                                s.api_host.replace(
-                                    ".i.posthog.com",
-                                    "-assets.i.posthog.com",
-                                ) + "/static/array.js"),
-                            (r =
-                                t.getElementsByTagName(
-                                    "script",
-                                )[0]).parentNode.insertBefore(p, r);
-                        var u = e;
-                        for (
-                            void 0 !== a ? (u = e[a] = []) : (a = "posthog"),
-                                u.people = u.people || [],
-                                u.toString = function (t) {
-                                    var e = "posthog";
-                                    return (
-                                        "posthog" !== a && (e += "." + a),
-                                        t || (e += " (stub)"),
-                                        e
-                                    );
-                                },
-                                u.people.toString = function () {
-                                    return u.toString(1) + ".people (stub)";
-                                },
-                                o =
-                                    "init me ws ys ps bs capture je Di ks register register_once register_for_session unregister unregister_for_session Ps getFeatureFlag getFeatureFlagPayload isFeatureEnabled reloadFeatureFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSurveysLoaded onSessionId getSurveys getActiveMatchingSurveys renderSurvey canRenderSurvey canRenderSurveyAsync identify setPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException loadToolbar get_property getSessionProperty Es $s createPersonProfile Is opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing clear_opt_in_out_capturing Ss debug xs getPageViewId captureTraceFeedback captureTraceMetric".split(
-                                        " ",
-                                    ),
-                                n = 0;
-                            n < o.length;
-                            n++
-                        )
-                            g(u, o[n]);
-                        e._i.push([i, s, a]);
-                    }),
-                    (e.__SV = 1));
-            })(document, window.posthog || []);
-            posthog.init("phc_xAvL2Iq4tFmANRE7kzbKwaSqp1HJjN7x48s3vr0CMjs", {
-                api_host: "https://us.i.posthog.com",
-                person_profiles: "identified_only", // or 'always' to create profiles for anonymous users as well,
-                session_recording: {
-                    recordCrossOriginIframes: true,
-                    capturePerformance: false,
-                },
-            });
-        </script>
-    </body>
+          </div>
+          <div class="ci-item">
+            <i class="fas fa-envelope"></i>
+            <p><a href="mailto:kalidhamguesthouse@rediffmail.com">kalidhamguesthouse@rediffmail.com</a></p>
+          </div>
+          <div class="d-flex gap-3 flex-wrap mt-4">
+            <a href="https://wa.me/919831492081?text=Hello%20Kali%20Dham%2C%20I%20want%20to%20enquire%20about%20a%20room." class="btn-wa" target="_blank" rel="noopener" data-testid="location-whatsapp">
+              <i class="fab fa-whatsapp"></i> WhatsApp Us
+            </a>
+            <a href="tel:+919831492081" class="btn-navy" data-testid="location-call">
+              <i class="fas fa-phone me-2"></i>Call Now
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SECTION 9: CTA BANNER
+============================================================ -->
+<section class="cta-section" data-testid="cta-banner">
+  <div class="container" data-aos="zoom-in">
+    <h2>Ready to Book Your Stay in Puri?</h2>
+    <p>Join thousands of happy families who choose Kali Dham Guest House every year. Direct bookings get the best rates — always.</p>
+    <div class="d-flex gap-3 justify-content-center flex-wrap">
+      <a href="/booking.html" class="btn-gold px-5 py-3" data-testid="cta-book-now">
+        <i class="fas fa-calendar-check me-2"></i>Book Now Online
+      </a>
+      <a href="https://wa.me/919831492081?text=Hello%20Kali%20Dham%2C%20I%20want%20to%20enquire%20about%20a%20room." class="btn-wa" target="_blank" rel="noopener" data-testid="cta-whatsapp">
+        <i class="fab fa-whatsapp"></i> WhatsApp Us
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="row g-5">
+      <div class="col-lg-4 col-md-6">
+        <img src="https://www.kalidhamguesthouse.com/style/images/kali_logo.png" alt="Kali Dham Guest House" class="footer-logo">
+        <p class="footer-tagline">Family legacy since 1977. Your home in Puri.</p>
+        <p style="font-size:0.86rem;opacity:0.7;">G+3 building in the heart of Gour Bat Sahi, Puri — just a short walk from the holy sea.</p>
+        <div class="social-links">
+          <a href="#" aria-label="Facebook" data-testid="social-facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" aria-label="Instagram" data-testid="social-instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="YouTube" data-testid="social-youtube"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <h5>Quick Links</h5>
+        <ul class="footer-links">
+          <li><a href="/index.html" data-testid="footer-nav-home">Home</a></li>
+          <li><a href="/rooms.html" data-testid="footer-nav-rooms">Rooms &amp; Rates</a></li>
+          <li><a href="/amenities.html" data-testid="footer-nav-amenities">Amenities</a></li>
+          <li><a href="/gallery.html" data-testid="footer-nav-gallery">Photo Gallery</a></li>
+          <li><a href="/about.html" data-testid="footer-nav-about">About Us</a></li>
+          <li><a href="/booking.html" data-testid="footer-nav-booking">Book Online</a></li>
+          <li><a href="/contact.html" data-testid="footer-nav-contact">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <h5>Get in Touch</h5>
+        <div class="footer-contact">
+          <p><i class="fas fa-map-marker-alt"></i> Gour Bat Sahi, Puri, Odisha 752001<br>Near Hotel Raj. Opp. New Kakatua Restaurant.</p>
+          <p><i class="fas fa-phone"></i> <a href="tel:+919831492081">+91 9831492081</a><br><a href="tel:+919230620199">+91 9230620199</a></p>
+          <p><i class="fas fa-envelope"></i> <a href="mailto:kalidhamguesthouse@rediffmail.com">kalidhamguesthouse@rediffmail.com</a></p>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; <span id="year"></span> Kali Dham Guest House, Puri, Odisha. All Rights Reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- WHATSAPP FLOAT BUTTON -->
+<a href="https://wa.me/919831492081?text=Hello%20Kali%20Dham%2C%20I%20want%20to%20enquire%20about%20a%20room." class="whatsapp-float" title="Chat with us on WhatsApp" target="_blank" rel="noopener" data-testid="whatsapp-float">
+  <i class="fab fa-whatsapp"></i>
+  <span class="wa-tooltip">Chat on WhatsApp</span>
+</a>
+
+<!-- Hidden React mount (for CRA dev server compatibility) -->
+<div id="root" style="display:none;height:0;overflow:hidden;"></div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<!-- AOS JS -->
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<!-- Custom JS -->
+<script src="/js/main.js"></script>
+<script>
+  // Init Swiper
+  new Swiper('.hero-swiper', {
+    effect: 'fade',
+    loop: true,
+    speed: 1200,
+    autoplay: { delay: 5000, disableOnInteraction: false },
+    pagination: { el: '.swiper-pagination', clickable: true },
+    fadeEffect: { crossFade: true }
+  });
+</script>
+</body>
 </html>
