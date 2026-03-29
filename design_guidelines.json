@@ -1,0 +1,196 @@
+{
+  "theme_and_archetype": {
+    "domain": "Hospitality / Real Estate",
+    "theme": "Light",
+    "archetype": "Heritage Luxury (Mix of Organic Earthy & Jewel Luxury)",
+    "vibe": "Professional, warm, family-friendly, coastal heritage.",
+    "e1_design_principles": [
+      "No generic Bootstrap components without heavy customization. Override shadows and borders.",
+      "Use ample negative space (padding: 4rem to 6rem on sections).",
+      "Headings must feel editorial and elegant, never corporate.",
+      "Asymmetry in image layouts. Use bento grids or overlapping containers where appropriate."
+    ]
+  },
+  "colors": {
+    "primary": "#1A3A5C",
+    "primary_rgb": "26, 58, 92",
+    "accent": "#C9A84C",
+    "accent_rgb": "201, 168, 76",
+    "background": "#F7F4EF",
+    "background_light": "#FFFFFF",
+    "whatsapp_green": "#25D366",
+    "text_main": "#1A3A5C",
+    "text_muted": "#5A6D80",
+    "border_color": "rgba(201, 168, 76, 0.3)",
+    "overlay_dark": "rgba(26, 58, 92, 0.6)"
+  },
+  "typography": {
+    "font_primary": "'Playfair Display', serif",
+    "font_secondary": "'Inter', sans-serif",
+    "headings": {
+      "font_family": "'Playfair Display', serif",
+      "font_weight": "700",
+      "letter_spacing": "-0.02em",
+      "color": "#1A3A5C",
+      "h1": "clamp(2.5rem, 5vw, 4.5rem)",
+      "h2": "clamp(2rem, 4vw, 3rem)",
+      "h3": "clamp(1.5rem, 3vw, 2.25rem)"
+    },
+    "body": {
+      "font_family": "'Inter', sans-serif",
+      "font_weight": "400",
+      "line_height": "1.7",
+      "color": "#5A6D80",
+      "font_size": "1rem"
+    },
+    "buttons_labels": {
+      "font_family": "'Inter', sans-serif",
+      "font_weight": "600",
+      "letter_spacing": "0.05em",
+      "text_transform": "uppercase"
+    }
+  },
+  "spacing_and_layout": {
+    "section_padding": "py-5 py-md-6",
+    "custom_css_spacing": {
+      "py-6": "padding-top: 5rem; padding-bottom: 5rem;",
+      "py-7": "padding-top: 7rem; padding-bottom: 7rem;"
+    },
+    "container_max_width": "1200px",
+    "grid_gap": "gap-4 gap-lg-5"
+  },
+  "components": {
+    "buttons": {
+      "primary": "background: #C9A84C; color: #fff; border: 1px solid #C9A84C; border-radius: 0; padding: 12px 28px; transition: all 0.3s ease;",
+      "primary_hover": "background: transparent; color: #1A3A5C; border: 1px solid #1A3A5C;",
+      "secondary": "background: transparent; color: #1A3A5C; border: 1px solid #1A3A5C; border-radius: 0; padding: 12px 28px; transition: all 0.3s ease;",
+      "secondary_hover": "background: #1A3A5C; color: #fff;"
+    },
+    "cards": {
+      "general": "border: none; background: #fff; border-radius: 0; padding: 0; overflow: hidden;",
+      "hover_effect": "transform: translateY(-8px); box-shadow: 0 15px 30px rgba(26, 58, 92, 0.1); transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);",
+      "testimonial_card": "border: 1px solid #C9A84C; padding: 2.5rem; background: #F7F4EF;"
+    },
+    "navbar": {
+      "style": "sticky-top; background: #fff; box-shadow: 0 2px 15px rgba(0,0,0,0.05); transition: all 0.3s ease;",
+      "links": "font-family: 'Inter'; font-weight: 500; color: #1A3A5C; text-transform: uppercase; font-size: 0.9rem;",
+      "link_hover": "color: #C9A84C;"
+    },
+    "top_bar": {
+      "style": "background: #1A3A5C; color: #fff; font-size: 0.85rem; padding: 8px 0;"
+    },
+    "footer": {
+      "style": "background: #1A3A5C; color: rgba(255,255,255,0.8); padding: 5rem 0 2rem 0;",
+      "headings": "color: #C9A84C; font-family: 'Playfair Display';"
+    },
+    "whatsapp_button": {
+      "style": "position: fixed; bottom: 30px; right: 30px; background: #25D366; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 30px; z-index: 1000; box-shadow: 0 4px 10px rgba(0,0,0,0.15);",
+      "animation": "animation: pulse-whatsapp 2s infinite;"
+    },
+    "hero_slider": {
+      "overlay": "position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(26, 58, 92, 0.4); z-index: 1;",
+      "text_content": "position: relative; z-index: 2; color: #fff; text-align: center;"
+    }
+  },
+  "pages_architecture": {
+    "index.html": {
+      "sections": ["Hero Slider", "Quick Booking Strip", "About Snippet (2-col)", "Featured Rooms (3 cards)", "Amenities Grid", "Why Choose Us", "Testimonials", "CTA Banner"]
+    },
+    "rooms.html": {
+      "sections": ["Page Header", "5 Room Type Detail Cards", "Booking Stepper"]
+    },
+    "amenities.html": {
+      "sections": ["Page Header", "12 Icon Cards", "Location Distances"]
+    },
+    "gallery.html": {
+      "sections": ["Page Header", "Filter Tabs", "Masonry Grid (Lightbox2)"]
+    },
+    "about.html": {
+      "sections": ["Page Header", "Our Story", "Team Cards", "Future Plans"]
+    },
+    "booking.html": {
+      "sections": ["Page Header", "Booking Form & Info Card (2-col)"]
+    },
+    "contact.html": {
+      "sections": ["Page Header", "Google Maps", "Contact Details & Short Form"]
+    }
+  },
+  "animations": {
+    "aos_settings": "offset: 100, duration: 800, easing: 'ease-in-out', once: true",
+    "custom_keyframes": "@keyframes pulse-whatsapp { 0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); } 70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); } 100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); } }"
+  },
+  "media_and_images": {
+    "hero": [
+      {
+        "url": "https://static.prod-images.emergentagent.com/jobs/4e7118be-a135-429d-b193-0fae6e94c9e9/images/ef18d5f296f3608396ba693aafae422c2151e40eb0b9b1d267526aaaec9a3df4.png",
+        "description": "Heritage Interior - Warm sunlight and elegant decor"
+      },
+      {
+        "url": "https://images.pexels.com/photos/5909685/pexels-photo-5909685.jpeg",
+        "description": "Indian family walking on beach at evening"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1648472243961-f9060e984066",
+        "description": "Puri Beach umbrella"
+      },
+      {
+        "url": "https://static.prod-images.emergentagent.com/jobs/4e7118be-a135-429d-b193-0fae6e94c9e9/images/9b5539019102af0a5d6c627bb991ee11baeb7324111f7aa069c3852b9291dc1b.png",
+        "description": "Breakfast balcony overlooking sea"
+      },
+      {
+        "url": "https://images.pexels.com/photos/2899687/pexels-photo-2899687.jpeg",
+        "description": "Hotel room beach view through sheer curtains"
+      }
+    ],
+    "rooms": [
+      {
+        "url": "https://static.prod-images.emergentagent.com/jobs/4e7118be-a135-429d-b193-0fae6e94c9e9/images/ff8178329b36941ac227ab0bd452afb9b01f42f4d138f743268a3a4e1e53d34b.png",
+        "description": "Sea View Room aesthetic"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1759299983523-d883f6ecf097",
+        "description": "Ocean view table and chairs"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1602236753446-cfd84b632e22",
+        "description": "White and blue beach view from window"
+      }
+    ],
+    "about_and_details": [
+      {
+        "url": "https://static.prod-images.emergentagent.com/jobs/4e7118be-a135-429d-b193-0fae6e94c9e9/images/5d3f1746298f668bcbb5f6bb23f7d0a10ebcc26c80ad0d44a3b4a3a36c7d7c9a.png",
+        "description": "Heritage brass diya detail"
+      },
+      {
+        "url": "https://images.pexels.com/photos/9345633/pexels-photo-9345633.jpeg",
+        "description": "Family in traditional clothing"
+      }
+    ],
+    "gallery": [
+      {
+        "url": "https://images.unsplash.com/photo-1659874817532-88fd34e6456a",
+        "description": "Group on beach"
+      }
+    ]
+  },
+  "testing": {
+    "attributes": "All interactive elements, buttons, inputs, links MUST have a data-testid attribute in kebab-case (e.g., data-testid='nav-home-link')."
+  },
+  "tech_stack_rules": {
+    "framework": "Pure HTML5, CSS3, Vanilla JS. NO REACT.",
+    "css": "Bootstrap 5.3 CDN for grid/utilities. style.css for custom overrides and specific component styling.",
+    "js": "main.js for initializing Swiper, Lightbox, AOS, and custom DOM logic.",
+    "icons": "Font Awesome 6 CDN.",
+    "libraries": "Swiper.js, Lightbox2, AOS.js"
+  },
+  "instructions_to_main_agent": [
+    "Strictly follow the color codes provided. Do NOT deviate to other shades.",
+    "Implement the layout entirely using Bootstrap 5.3 utilities (d-flex, g-4, py-5, etc.) and semantic HTML.",
+    "Include a common CSS file `/css/style.css` and JS file `/js/main.js` across all 7 pages.",
+    "Use Swiper.js for the hero section with effect 'fade' and autoplay enabled.",
+    "Ensure the floating WhatsApp button is present on all 7 pages, fixed at the bottom right.",
+    "Add 'data-testid' to every interactive element (links, buttons, form fields).",
+    "All images MUST be populated with the media URLs provided in this JSON. DO NOT use placeholder services.",
+    "Maintain the Playfair Display + Inter font combination as requested, giving it an elegant, high-end feel."
+  ]
+}
